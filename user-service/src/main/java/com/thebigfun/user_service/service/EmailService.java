@@ -1,0 +1,1 @@
+package com.thebigfun.user_service.service;public interface EmailService {    void enviarCodigoRecuperacion(String destino, String codigo);}

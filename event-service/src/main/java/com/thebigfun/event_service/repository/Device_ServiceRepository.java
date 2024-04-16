@@ -1,0 +1,1 @@
+package com.thebigfun.event_service.repository;import com.betabyte.device_service.model.entity.Device_Service;import org.springframework.data.jpa.repository.JpaRepository;public interface Device_ServiceRepository extends JpaRepository<Device_Service, Integer > {}

@@ -1,0 +1,1 @@
+package com.thebigfun.user_service.model;public enum TokenType {    BEARER}
