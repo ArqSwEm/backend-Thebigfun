@@ -1,0 +1,1 @@
+package com.thebigfun.event_service.repository;import com.thebigfun.event_service.model.entity.Event_Service;import org.springframework.data.jpa.repository.JpaRepository;public interface Event_ServiceRepository extends JpaRepository<Event_Service, Integer > {}
