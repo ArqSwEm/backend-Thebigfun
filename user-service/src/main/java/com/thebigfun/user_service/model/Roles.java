@@ -1,1 +1,1 @@
-package com.thebigfun.user_service.model;public enum Roles {    USER,    ADMIN,    TECHNICIAN}
+package com.thebigfun.user_service.model;public enum Roles {    USER,    ADMIN,    ORGANIZER}
