@@ -1,1 +1,0 @@
-package com.thebigfun.ticket_service.repository;import com.thebigfun.ticket_service.model.entity.Ticket_Service;import org.springframework.data.jpa.repository.JpaRepository;import org.springframework.stereotype.Repository;@Repositorypublic interface Ticket_ServiceRepository extends JpaRepository<Ticket_Service, Integer > {}
