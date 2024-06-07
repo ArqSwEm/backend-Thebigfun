@@ -1,0 +1,1 @@
+package com.thebigfun.payment_service.service;import com.thebigfun.payment_service.dtos.PaymentRequest;import reactor.core.publisher.Mono;import java.util.Map;public interface PaymentGatewayService {    Mono<Map<String, Object>> processPayment(PaymentRequest request);}

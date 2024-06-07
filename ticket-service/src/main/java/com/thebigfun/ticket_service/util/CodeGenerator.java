@@ -1,0 +1,1 @@
+package com.thebigfun.ticket_service.util;import java.security.SecureRandom;public class CodeGenerator {    private static final SecureRandom secureRandom = new SecureRandom();    public static String generateShortCode() {        int code = secureRandom.nextInt(900000) + 100000; // Genera un número entre 100000 y 999999        return String.valueOf(code);    }}
