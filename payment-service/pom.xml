@@ -59,12 +59,49 @@
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 
+		<!-- Stripe -->
+		<dependency>
+			<groupId>com.stripe</groupId>
+			<artifactId>stripe-java</artifactId>
+			<version>20.91.0</version>
+		</dependency>
+
+		<!-- for culqui -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<!-- Jackson para manejo de JSON -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<!-- depedencia blockchain -->
+
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>core</artifactId>
+			<version>4.8.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>utils</artifactId>
+			<version>4.8.7</version>
+		</dependency>
 
 
+		<!-- Add dependencies for other providers as needed -->
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
 	<build>
 		<plugins>
+			<!-- Spring Boot Maven Plugin -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -77,7 +114,38 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<!-- Web3j Maven Plugin -->
+			<plugin>
+				<groupId>org.web3j</groupId>
+				<artifactId>web3j-maven-plugin</artifactId>
+				<version>4.8.7</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate-sources</goal>
+						</goals>
+						<configuration>
+							<packageName>com.thebigfun.payment_service.contract</packageName>
+							<sourceDestination>${project.build.directory}/generated-sources/</sourceDestination>
+							<nativeJavaType>true</nativeJavaType>
+							<soliditySourceFiles>
+								<directory>src/main/resources/</directory>
+								<includes>
+									<include>*.sol</include>
+								</includes>
+							</soliditySourceFiles>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
 		</plugins>
 	</build>
+
+
 
 </project>
