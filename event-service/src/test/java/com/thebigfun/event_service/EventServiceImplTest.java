@@ -1,6 +1,6 @@
 package com.thebigfun.event_service;
 
-import com.thebigfun.event_service.model.entity.Event;
+import com.thebigfun.event_service.model.Event;
 import com.thebigfun.event_service.repository.EventRepository;
 import com.thebigfun.event_service.service.Impl.EventServiceImpl;
 import org.junit.jupiter.api.BeforeEach;

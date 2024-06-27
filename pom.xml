@@ -29,6 +29,7 @@
 		<module>ticket-service</module>
 		<module>event-service</module>
 		<module>api-gateway</module>
+		<module>chatbot_service/chatbot_service</module>
 
 	</modules>
 

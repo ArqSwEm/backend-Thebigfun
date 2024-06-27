@@ -1,0 +1,1 @@
+package com.thebigfun.chatbot_service.service;import java.util.List;public interface ChatbotService {    public abstract String createChatAndReturnResponse(String message);}
